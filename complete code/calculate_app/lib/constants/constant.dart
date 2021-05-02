@@ -1,0 +1,53 @@
+enum CalcButtons {
+  num0,
+  num1,
+  num2,
+  num3,
+  num4,
+  num5,
+  num6,
+  num7,
+  num8,
+  num9,
+  numDot,
+  AC,
+  plusMinus,
+  mod,
+  divide,
+  multiply,
+  add,
+  minus,
+  equal
+}
+
+const List<List<CalcButtons>> buttons = [
+  [
+    CalcButtons.AC,
+    CalcButtons.plusMinus,
+    CalcButtons.mod,
+    CalcButtons.divide,
+  ],
+  [
+    CalcButtons.num7,
+    CalcButtons.num8,
+    CalcButtons.num9,
+    CalcButtons.multiply,
+  ],
+  [
+    CalcButtons.num4,
+    CalcButtons.num5,
+    CalcButtons.num6,
+    CalcButtons.minus,
+  ],
+  [
+    CalcButtons.num1,
+    CalcButtons.num2,
+    CalcButtons.num3,
+    CalcButtons.add,
+  ],
+  [
+    CalcButtons.num0,
+    CalcButtons.numDot,
+    CalcButtons.equal,
+  ],
+];
