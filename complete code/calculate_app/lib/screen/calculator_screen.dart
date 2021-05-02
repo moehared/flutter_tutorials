@@ -1,7 +1,8 @@
 import 'package:calculate_app/calculator_model/calculator.dart';
 import 'package:calculate_app/constants/constant.dart';
-import 'package:calculate_app/widget/round_button.dart';
 import 'package:flutter/material.dart';
+
+import '../widget/round_button.dart';
 
 class CalculatorScreen extends StatefulWidget {
   @override
@@ -20,8 +21,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final media = MediaQuery.of(context).size;
-    // print('width is ${media.width}\n height is ${media.height}');
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -30,52 +29,44 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         title: Text('Calculator'),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(bottom: 40),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: media.width > 500
-                ? MainAxisAlignment.center
-                : MainAxisAlignment.end,
-            children: [
-              Align(
-                alignment: media.width > 500
-                    ? Alignment.topCenter
-                    : Alignment.topRight,
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Text(
-                    result,
-                    style: TextStyle(fontSize: 60, color: Colors.white),
-                  ),
+        padding: const EdgeInsets.only(bottom: 30.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text(
+                  result,
+                  style: TextStyle(fontSize: 60, color: Colors.white),
                 ),
               ),
-              ...Calculator.buttonList.map((row) {
-                return Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Row(
-                    mainAxisAlignment: media.width > 500
-                        ? MainAxisAlignment.center
-                        : MainAxisAlignment.end,
-                    children: [
-                      ...row.map((e) {
-                        final calc = Calculator(e);
-                        return FabButton(
-                          label: calc.title,
-                          color: calc.buttonColor,
-                          onPressed: () {
-                            setState(() {
-                              _updateUi(e);
-                            });
-                          },
-                          labelColor: calc.textColor,
-                        );
-                      }),
-                    ],
-                  ),
-                );
-              }).toList()
-            ],
-          ),
+            ),
+            ...Calculator.buttonList.map((row) {
+              return Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    ...row.map((e) {
+                      final calc = Calculator(e);
+                      return FabButton(
+                        label: calc.title,
+                        color: calc.buttonColor,
+                        onPressed: () {
+                          setState(() {
+                            _updateUi(e);
+                          });
+                        },
+                        labelColor: calc.textColor,
+                      );
+                    }),
+                  ],
+                ),
+              );
+            }).toList()
+          ],
         ),
       ),
     );
@@ -189,6 +180,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     return res;
   }
 }
+ // not clean code. we are duplicating the code
+
 
 // Row(
 //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
