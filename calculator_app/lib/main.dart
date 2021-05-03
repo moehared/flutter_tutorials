@@ -1,5 +1,4 @@
-import 'package:calculator_app/widgets/casharka_column.dart';
-import 'package:calculator_app/widgets/casharka_row.dart';
+import 'package:calculator_app/widgets/fab_button.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,33 +21,154 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          leading: Icon(Icons.menu),
-          title: Text('app title'),
-          actions: [
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {},
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        brightness: Brightness.dark,
+        // leading: Icon(Icons.menu),
+        title: Text('App Bar'),
+        // actions: [
+        //   IconButton(
+        //     icon: Icon(Icons.search),
+        //     onPressed: () {},
+        //   ),
+        //   IconButton(
+        //     icon: Icon(Icons.add),
+        //     onPressed: () {},
+        //   ),
+        // ],
+      ),
+
+      // kan waxaa waaye casharaadi hore
+
+      // body: Container(
+      //   width: 400,
+      //   height: 400,
+      //   child: Column(
+      //     children: [
+      //       CasharkaColumn(),
+      //       CasharkaRow(),
+      //     ],
+      //   ),
+      // ),
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: Text(
+                '90.00',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
-            IconButton(
-              icon: Icon(Icons.add),
-              onPressed: () {},
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                FabButton(
+                  textLabel: 'AC',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '+/-',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '%',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '/',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                FabButton(
+                  textLabel: 'AC',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '+/-',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '%',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '/',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                FabButton(
+                  textLabel: 'AC',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '+/-',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '%',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '/',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                FabButton(
+                  textLabel: 'AC',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '+/-',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '%',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+                FabButton(
+                  textLabel: '/',
+                  backgroundColor: Colors.grey,
+                  textColor: Colors.black,
+                ),
+              ],
             ),
           ],
-        ),
-        body: Container(
-          // height: 400,
-          // width: 400,
-          color: Colors.amber.shade500,
-          // child: CasharkaColumn(),
-          child: Column(
-            children: [
-              CasharkaColumn(),
-              CasharkaRow(),
-            ],
-          ),
         ),
       ),
     );
