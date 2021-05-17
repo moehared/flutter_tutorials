@@ -9,7 +9,7 @@ class FabButton extends StatelessWidget {
   FabButton({
     this.textLabel,
     this.backgroundColor,
-    this.textColor = Colors.white,
+    this.textColor,
     this.onPress,
   });
 

@@ -20,7 +20,7 @@ enum Buttons {
   dot,
 }
 // print(Buttons[4][2]) //
-// 2 by 2
+// 4 by 4
 const buttons = [
   // index 0
   [

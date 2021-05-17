@@ -91,4 +91,56 @@ class Calculator {
         return Colors.grey[850];
     }
   }
+
+  Color get textBackGroundColor {
+    switch (buttonData) {
+      case Buttons.AC:
+      case Buttons.mod:
+      case Buttons.plusMinus:
+        return Colors.black;
+        break;
+      default:
+        return Colors.white;
+    }
+  }
+
+  String get numbers {
+    switch (buttonData) {
+      case Buttons.num0:
+        return '0';
+        break;
+      case Buttons.num1:
+        return '1';
+        break;
+      case Buttons.num2:
+        return '2';
+        break;
+      case Buttons.num3:
+        return '3';
+        break;
+      case Buttons.num4:
+        return '4';
+        break;
+      case Buttons.num5:
+        return '5';
+        break;
+      case Buttons.num6:
+        return '6';
+        break;
+      case Buttons.num7:
+        return '7';
+        break;
+      case Buttons.num8:
+        return '8';
+        break;
+      case Buttons.num9:
+        return '9';
+        break;
+      case Buttons.dot:
+        return '.';
+        break;
+      default:
+        return '';
+    }
+  }
 }
