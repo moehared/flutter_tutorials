@@ -67,7 +67,7 @@ const players = const [
     position: 'Forward',
   ),
   Player(
-    id: '1',
+    id: '5',
     name: 'Mohamed Salah',
     age: 28,
     currentTeamLogo:
@@ -83,7 +83,7 @@ const players = const [
     position: 'Forward',
   ),
   Player(
-    id: '2',
+    id: '6',
     name: 'Cristiano Ronaldo',
     age: 34,
     currentTeamLogo:
@@ -100,7 +100,7 @@ const players = const [
     position: 'Forward',
   ),
   Player(
-    id: '3',
+    id: '7',
     name: 'Messi',
     age: 33,
     countryName: 'Argartine',
@@ -404,7 +404,7 @@ const players = const [
         'https://www.futwiz.com/assets/img/fifa19/careerfaces/209331.png',
     salary: 10.4,
     playerDescription:
-        'Mohamed Salah is an Egyptian footballer who plays as a forward for the Egyptian national team as well as the Premier League club Liverpool\n. Born and brought up in Gharbia, Egypt, he is a gifted footballer since his childhood\n. He started his career with the youth team of the Egyptian club El Mokawloon\n',
+        'Mohamed Salah is an Egyptian footballer who plays as a forward for the Egyptian national team as well as the Premier League club Liverpool\n. ',
     position: 'Forward',
   ),
   Player(

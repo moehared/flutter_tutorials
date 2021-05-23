@@ -18,10 +18,12 @@ class PlayerInfo extends StatelessWidget {
           // Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
           //   return PlayerDetailsScreen();
           // }));
-          Navigator.of(context).pushNamed(
-            PlayerDetailsScreen.routeName,
-            arguments: player.id,
-          );
+          Navigator.of(context)
+              .pushNamed(
+                PlayerDetailsScreen.routeName,
+                arguments: player.id,
+              )
+              .then((playerResult) => print(playerResult));
         },
         contentPadding: EdgeInsets.all(15),
         leading: CircleAvatar(
